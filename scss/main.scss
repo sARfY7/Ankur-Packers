@@ -18,6 +18,7 @@ body {
 a:link,
 a:visited {
   text-decoration: none;
+  color: #000;
 }
 
 .wrapper {
@@ -287,4 +288,51 @@ a:visited {
   color: #fff;
   opacity: 0;
   transition: opacity 0.2s;
+}
+
+// ==============================
+// Responsiveness
+// ==============================
+
+@media screen and (max-width: 860px) {
+  .products,
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .categories {
+    flex-direction: column;
+  }
+
+  .category {
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    padding: 3rem;
+  }
 }
